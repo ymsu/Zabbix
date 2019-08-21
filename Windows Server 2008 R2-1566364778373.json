@@ -1,0 +1,7181 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Nice and clean status about your server.",
+  "editable": true,
+  "gnetId": 5363,
+  "graphTooltip": 1,
+  "id": 15,
+  "iteration": 1566357366129,
+  "links": [],
+  "panels": [
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 85,
+      "title": "System Overview",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgb(18, 251, 0)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "Zabbix",
+      "decimals": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 1,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 1
+      },
+      "hideTimeOverride": true,
+      "id": 3,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Zabbix agent"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Agent ping"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "5m",
+      "timeShift": null,
+      "title": "Available",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "ONLINE",
+          "value": "1"
+        },
+        {
+          "op": "=",
+          "text": "OFFLINE",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgb(18, 251, 0)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 1,
+      "format": "dtdurations",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 3,
+        "y": 1
+      },
+      "hideTimeOverride": true,
+      "id": 2,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Operating System"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "System uptime"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "slaProperty": {
+            "name": "SLA",
+            "property": "sla"
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Uptime",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "OFFLINE",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 0,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 8,
+        "y": 1
+      },
+      "hideTimeOverride": true,
+      "id": 24,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "CPU"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Number of CPUs online"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total CPU ",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 0,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 10,
+        "y": 1
+      },
+      "id": 4,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "#5794F2",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Processor Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Processor % Processor Time"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "50,80",
+      "title": "CPU utilization",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#F2495C",
+        "#73BF69",
+        "#73BF69"
+      ],
+      "datasource": "Zabbix",
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 13,
+        "y": 1
+      },
+      "id": 5,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Available %"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "10,100",
+      "title": "Memory Available",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": true,
+      "colors": [
+        "#5794F2",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 0,
+      "format": "bytes",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 16,
+        "y": 1
+      },
+      "hideTimeOverride": true,
+      "id": 27,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Memory",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": true,
+      "colors": [
+        "#5794F2",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 0,
+      "format": "bytes",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 18,
+        "y": 1
+      },
+      "hideTimeOverride": true,
+      "id": 37,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Available"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Available Memory",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 0,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 21,
+        "y": 1
+      },
+      "id": 36,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Disk"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "LogicalDisk Disk C: Space Used %"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "50,80",
+      "title": "Disk C Used : %",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0",
+        "Used memory in %": "#70dbed"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "description": "The Processor(_total)\\% Privileged Time counter shows the percent of time that the processor is spent executing in Kernel (or Privileged) mode.\n\nThe Processor(_total)\\% User Time counter shows the percent of time that the processor(s) is spent executing in User mode.",
+      "fill": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 5
+      },
+      "id": 38,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [
+        {
+          "alias": "/.*CPU*/",
+          "fill": 0,
+          "lines": true,
+          "yaxis": 2,
+          "zindex": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Processor Performance"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(.*)Time/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*)Time/, $1)"
+            },
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/Processor % (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/Processor % (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Processor % Privileged Time"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Processor Performance"
+          },
+          "functions": [
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(.*)Time/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*)Time/, $1)"
+            },
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/Processor % (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/Processor % (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Processor % User Time"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU Usage %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0",
+        "Used memory in %": "#70dbed"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "description": "Processor Queue Length is the number of threads in the processor queue. Unlike the disk counters, this counter counters, this counter shows ready threads only, not threads that are running. There is a single queue for processor time even on computers with multiple processors. Therefore, if a computer has multiple processors, you need to divide this value by the number of processors servicing the workload. A sustained processor queue of less than 10 threads per processor is normally acceptable, dependent of the workload.",
+      "fill": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 13,
+        "x": 0,
+        "y": 14
+      },
+      "id": 44,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [
+        {
+          "alias": "/.*CPU*/",
+          "fill": 0,
+          "lines": true,
+          "yaxis": 2,
+          "zindex": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Processor Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Processor Queue Length"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Processor Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Server Work Queues"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Processor Queue Length",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "none",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": -1,
+      "description": "Context Switches/sec 指计算机上的所有处理器全都从一个线程切换到另一个线程的综合速率。当正在运行的线程自动放弃处理器时出现上下文开关，由一个有更高优先就绪的线程占先或在用户模式和特权(内核)模式之间切换以使用执行或分系统服务。它是在计算机上的所有处理器上运行的所有线程的 Thread\\\\Context Switches/sec的总数，并且用切换次数来计算。在系统和线程对象上有上下文开关计数器。此计数器显示上两个采样中观察到的值的差除以采样间隔时间所得的值。",
+      "fill": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 11,
+        "x": 13,
+        "y": 14
+      },
+      "id": 40,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "System Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "System Context Switches/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "System Context Switches/sec",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "none",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": "10",
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0",
+        "Used memory in %": "#70dbed"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "fill": 5,
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "id": 39,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Available"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Cached"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory Total, Cached, Available and Free",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "decbytes",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0",
+        "Used memory in %": "#70dbed"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "description": " Pages/sec is the rate at which pages are read from or written to disk to resolve hard page faults. This counter is a primary indicator of the kinds of faults that cause system-wide delays. It is the sum of Memory\\\\Pages Input/sec and Memory\\\\Pages Output/sec. It is counted in numbers of pages, so it can be compared to other counts of pages, such as Memory\\\\Page Faults/sec, without conversion. It includes pages retrieved to satisfy faults in the file system cache (usually requested by applications) non-cached mapped memory files.",
+      "fill": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 33
+      },
+      "id": 47,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Pages/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Memory Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory Pages Input/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory Pages and Page Inputs",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "decbytes",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": -1,
+      "description": "",
+      "fill": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 33
+      },
+      "id": 48,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Memory % Committed Bytes in Use"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory % Committed Bytes in Use",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": "10",
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "fill": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 42
+      },
+      "id": 32,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sideWidth": null,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Disk"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/LogicalDisk Disk (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/LogicalDisk Disk (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^LogicalDisk Disk ((?!%).)*Space Available$/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Disk"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/LogicalDisk Disk (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/LogicalDisk Disk (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^LogicalDisk Disk ((?!%).)*Space Total$/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Disk Space",
+      "tooltip": {
+        "shared": true,
+        "sort": 1,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "decbytes",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": null,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "fill": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 42
+      },
+      "id": 34,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sideWidth": null,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Disk"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/LogicalDisk(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/LogicalDisk(.*)/, $1)"
+            },
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(.*)Space /",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*)Space /, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^LogicalDisk Disk ((?!%).)*Space Used %$/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Disk Space Used %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": null,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": -1,
+      "description": "",
+      "fill": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 50
+      },
+      "id": 46,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Disk Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "PhysicalDisk Avg. Disk Queue Length"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "PhysicalDisk Avg. Disk Queue Length",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "none",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": "10",
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "description": "Avg. Disk sec/Read 指以秒计算的在此盘上读取数据的所需平均时间。\n\nAvg. Disk sec/Write 指以秒计算的在此盘上写入数据的所需平均时间。",
+      "fill": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 50
+      },
+      "id": 41,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Disk Performance"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/\\\\LogicalDisk\\((.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/\\\\LogicalDisk\\((.*)/, $1)"
+            },
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/\\)\\\\(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/\\)\\\\(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^\\\\LogicalDisk.*(Read|Write)$/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Read/Write Latency",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 4,
+          "format": "s",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": "10",
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": -1,
+      "description": "",
+      "fill": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 58
+      },
+      "id": 45,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Process Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^IO .* Operations\\/sec$/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Processes IO Operations/sec",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "none",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": "10",
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "CPU system time": "#e24d42",
+        "Espaço livre na partição C: % (pfree)": "#629E51",
+        "Espaço livre na partição D: % (pfree)": "#E5AC0E",
+        "Used memory %": "#6ed0e0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "description": "% Registry Quota In Use 指系统当前使用的 Total Registry Quota Allowed 的百分比。此计数器仅显示当前百分比值；它不是平均值。",
+      "fill": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 58
+      },
+      "id": 22,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "System Performance"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "System % Registry Quota In Use"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Registry Quota In Use",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "percent",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "dtdurationms",
+          "label": "",
+          "logBase": 1,
+          "max": "10",
+          "min": "0",
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 66
+      },
+      "id": 79,
+      "panels": [],
+      "title": "SQLServer Data/Log",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "fill": 1,
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 0,
+        "y": 67
+      },
+      "id": 51,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Databases: Data File\\(s\\) Size(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Databases: Data File\\(s\\) Size(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^SQLServer:Databases: Data File\\(s\\) Size .*/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Database | Data File Size",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "fill": 1,
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 67
+      },
+      "id": 81,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Databases: Log File\\(s\\) Size(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Databases: Log File\\(s\\) Size(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^SQLServer:Databases: Log File\\(s\\) Size .*/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Database | Log File Size",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "fill": 1,
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 0,
+        "y": 81
+      },
+      "id": 86,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Databases: Percent Log Used(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Databases: Percent Log Used(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^SQLServer:Databases: Percent Log Used .*/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Log File Used %",
+      "tooltip": {
+        "shared": true,
+        "sort": 1,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 95
+      },
+      "id": 75,
+      "panels": [],
+      "title": "SQLServer Buffer Manager",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Percentage of pages that were found in the buffer pool without having to incur a read from disk.\n\n≥ 95%   好   \n≥ 90%   正常  \n< 90%   需关注",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 96
+      },
+      "id": 18,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Buffer Manager: Buffer cache hit ratio"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Buffer Cache Hit Ratio",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": " Database pages  :  缓冲池中数据库内容的页数",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 96
+      },
+      "id": 58,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer: Buffer Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer: Buffer Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Buffer Manager: Database pages"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Database pages",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Checkpoint pages/sec  :   Checkpoint的执行频率，若执行的频率过高。则说明服务器过于频繁的修改数据。",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 96
+      },
+      "id": 68,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer: Buffer Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer: Buffer Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Buffer Manager: Checkpoint pages/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Checkpoint pages",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Lazy writes/sec  :  若懒写入过于频繁，说明没有空闲的缓冲区供使用，内存可能存在一定瓶颈。“惰性编写器”是一个系统进程，用于成批刷新脏的过期的缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 103
+      },
+      "id": 69,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer: Buffer Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer: Buffer Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Buffer Manager: Lazy writes/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Lazy writes/sec ",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Page life expectancy  :  指示页面在没有引用的情况下，在此节点的缓冲池中停留的时间（以秒计）。此值若降低说明，服务器频繁查询数据库中数据。",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 103
+      },
+      "id": 67,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer: Buffer Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer: Buffer Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Buffer Manager: Page life expectancy"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Page life expectancy",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 110
+      },
+      "id": 73,
+      "panels": [],
+      "repeat": null,
+      "title": "SQLServer Memory Manager",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Target Server Memory (KB)  \nTotal Server Memory (KB)  \n\n理想上能使用内存量与内存管理器提交的内存量。若此两值存在差异则说明内存异常。",
+      "fill": 1,
+      "gridPos": {
+        "h": 11,
+        "w": 13,
+        "x": 0,
+        "y": 111
+      },
+      "id": 76,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Memory Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Memory Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:Memory Manager: Target Server Memory"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Memory Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Memory Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:Memory Manager: Total Server Memory"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Total / Target Server Memory",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Memory Grants Pending\n\n指等待分配内存的进程数量，若此值过高或内存或磁盘存在一定瓶颈。",
+      "fill": 1,
+      "gridPos": {
+        "h": 11,
+        "w": 11,
+        "x": 13,
+        "y": 111
+      },
+      "id": 77,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Memory Manager: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Memory Manager: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:Memory Manager: Memory Grants Pending"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory Grants Pending",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 122
+      },
+      "id": 71,
+      "panels": [],
+      "title": "SQLServer Acess Methods",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Access Methods 监视用于访问数据库中存储的数据的方法有助于确定是否可以通过添加或修改索引、添加或移动分区、添加文件或文件组、对索引进行碎片整理或者重写查询来提高查询性能。 \nAccess Methods 计数器也可用于监视数据库中数据、索引和可用空间的数量，从而指示每个服务器实例的数据卷和碎片。索引的碎片过多会降低性能。\n\nPage Splits/sec : 每秒由于索引页溢出而发生的页拆分数。此数据越大表示某表的修改频率较高，且要确认该索引是否适合建立该字段上。\n\nWorkfiles Created/sec : 每秒创建的工作文件数\n\nWorktables Created/sec : 每秒创建的工作表数\n\nFull Scans/sec ： 每秒 SQL 做全表扫描数目\n\nIndex Scans/sec ： 每秒 SQL 做索引扫描数目",
+      "fill": 1,
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 123
+      },
+      "id": 65,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Access Methods:(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Access Methods:(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^SQLServer:Access Methods: .*/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Access Methods ",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 133
+      },
+      "id": 31,
+      "panels": [],
+      "title": "SQL Statistics; Wait Statistics",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "平均每秒用户连接数据库的个数（个）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 0,
+        "y": 134
+      },
+      "id": 57,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: User Connections"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "User Connections",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "请求数",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 6,
+        "y": 134
+      },
+      "id": 59,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:SQL Statistics: Batch Requests/Sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Batch Requests/sec",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "每秒登录/登出次数（次/秒）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 12,
+        "y": 134
+      },
+      "id": 66,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: Logouts/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: Logins/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "F",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Logins/Logouts",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "每个 SQL 有一个执行计划，执行计划的命中率（%）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 134
+      },
+      "id": 64,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:Plan Cache: Cache Hit Ratio"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Plan Cache：Cache Hit Ratio",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": "100",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "SQL Compilation/sec  :  平均每秒 SQL 编译次数（次/秒）\n\nSQL Re-Compilation/sec  :  平均每秒 SQL 重编译次数（次/秒）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 0,
+        "y": 141
+      },
+      "id": 63,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:SQL Statistics: SQL Compilations/Sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:SQL Statistics: SQL Re-Compilations/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "SQL Compilation/sec and  SQL Re-Compilation/sec",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "Number of active transactions for the database.",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 6,
+        "y": 141
+      },
+      "id": 56,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:Databases: Active Transactions(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:Databases: Active Transactions(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "/^SQLServer:Databases: Active Transactions (?!msdb|tempdb|master|tempdb|ReportServer|ReportServerTempDb).*/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Active Transactions",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "平均每秒锁请求的次数（次/秒）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 12,
+        "y": 141
+      },
+      "id": 61,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(.*): _Total/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*): _Total/, $1)"
+            },
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/QLServer: Locks: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/QLServer: Locks: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Locks: Lock Requests/sec: _Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Lock Requests/sec",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "每秒要求调用者等待的锁请求数（次/秒）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 141
+      },
+      "id": 62,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer: Locks: (.*)_Total/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer: Locks: (.*)_Total/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Locks: Lock Waits / Sec: _Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Lock waits",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 0,
+        "y": 148
+      },
+      "id": 49,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Locks: Number of Deadlocks/sec: _Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Locks: Lock Timeouts/sec: _Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Locks: Lock Waits / Sec: _Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Latches: Latch Waits/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Database Activity",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "当前阻塞数量（个）",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 6,
+        "y": 148
+      },
+      "id": 60,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: Processes blocked"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Processes blocked",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 12,
+        "y": 148
+      },
+      "id": 50,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: User Connections"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:SQL Statistics: SQL Compilations/Sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:SQL Statistics: SQL Re-Compilations/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:SQL Statistics: Batch Requests/Sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: Logouts/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: Logins/sec"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "F",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:SQL Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:SQL Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer:General Statistics: Processes blocked"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "SQL Server Activity",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Incoming network traffic on vmxnet3 Ethernet Adapter #2": "#1f78c1",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2": "rgba(237, 129, 40, 0.79)",
+        "Outgoing network traffic on vmxnet3 Ethernet Adapter #2-WFP LightWeight Filter-0000": "rgba(237, 129, 40, 0.89)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Zabbix",
+      "decimals": 2,
+      "description": "",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 148
+      },
+      "id": 87,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "SQL"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/SQLServer:General Statistics: (.*)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/SQLServer:General Statistics: (.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "SQLServer: Locks: Number of Deadlocks/sec: _Total"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Dead Locks",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 155
+      },
+      "id": 29,
+      "panels": [],
+      "title": "Problems",
+      "type": "row"
+    },
+    {
+      "ackEventColor": "rgb(56, 219, 156)",
+      "ageField": false,
+      "customLastChangeFormat": false,
+      "datasources": [
+        "Zabbix"
+      ],
+      "descriptionAtNewLine": false,
+      "descriptionField": true,
+      "fontSize": "120%",
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 156
+      },
+      "highlightBackground": true,
+      "highlightNewEvents": true,
+      "highlightNewerThan": "1h",
+      "hostField": true,
+      "hostGroups": false,
+      "hostProxy": false,
+      "hostTechNameField": false,
+      "hostsInMaintenance": true,
+      "id": 17,
+      "lastChangeFormat": "",
+      "layout": "table",
+      "limit": 100,
+      "links": [],
+      "markAckEvents": true,
+      "okEventColor": "rgb(56, 189, 113)",
+      "pageSize": 10,
+      "problemTimeline": true,
+      "resizedColumns": [],
+      "schemaVersion": 6,
+      "severityField": true,
+      "showEvents": {
+        "text": "Problems",
+        "value": 1
+      },
+      "showTags": true,
+      "showTriggers": "all triggers",
+      "sortTriggersBy": {
+        "text": "last change",
+        "value": "lastchange"
+      },
+      "statusField": false,
+      "statusIcon": false,
+      "targets": {
+        "0": {
+          "application": {
+            "filter": ""
+          },
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "refId": "A",
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          }
+        },
+        "Zabbix": {
+          "application": {
+            "filter": ""
+          },
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          }
+        }
+      },
+      "title": "Problems",
+      "triggerSeverity": [
+        {
+          "color": "rgb(108, 108, 108)",
+          "priority": 0,
+          "severity": "Not classified",
+          "show": true
+        },
+        {
+          "color": "rgb(120, 158, 183)",
+          "priority": 1,
+          "severity": "Information",
+          "show": true
+        },
+        {
+          "color": "rgb(175, 180, 36)",
+          "priority": 2,
+          "severity": "Warning",
+          "show": true
+        },
+        {
+          "color": "rgb(255, 137, 30)",
+          "priority": 3,
+          "severity": "Average",
+          "show": true
+        },
+        {
+          "color": "rgb(255, 101, 72)",
+          "priority": 4,
+          "severity": "High",
+          "show": true
+        },
+        {
+          "color": "rgb(215, 0, 0)",
+          "priority": 5,
+          "severity": "Disaster",
+          "show": true
+        }
+      ],
+      "type": "alexanderzobnin-zabbix-triggers-panel"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgb(18, 251, 0)",
+        "#f9934e",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "Zabbix",
+      "decimals": 0,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 168
+      },
+      "hideTimeOverride": true,
+      "id": 10,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "Host group",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "$Group"
+          },
+          "host": {
+            "filter": "$Hosts"
+          },
+          "item": {
+            "filter": "Perda de Pacotes"
+          },
+          "mode": 4,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "thresholds": "1,3",
+      "timeFrom": "5y",
+      "title": "Problems",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [],
+      "valueName": "current"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 18,
+  "style": "dark",
+  "tags": [
+    "zabbix"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Zabbix",
+        "definition": "",
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "Group",
+        "options": [],
+        "query": "*",
+        "refresh": 1,
+        "regex": "/^(?!Discovered)(?!Template)(?!Zabbix)/",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "tags": [],
+          "text": "192.168.1.61",
+          "value": "192.168.1.61"
+        },
+        "datasource": "Zabbix",
+        "definition": "",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Hosts",
+        "options": [],
+        "query": "$Group.*",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Windows Server 2008 R2",
+  "uid": "41URQF7mz",
+  "version": 242
+}
